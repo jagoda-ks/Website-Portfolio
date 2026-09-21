@@ -1,39 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Pages Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-            background-color: #f4f4f4;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            max-width: 500px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #2d7ff9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagoda Koczwara-Szuba · Portfolio</title>
+  <meta name="description" content="Second-year Computer Science student at Trinity College Dublin — projects, interests, and CV.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Shantell+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=sketch19">
 </head>
 <body>
-    <div class="card">
-        <h1>🎉 It Works!</h1>
-        <p>If you can see this page on GitHub Pages, your website is live.</p>
-        <p>Hosted for free with GitHub Pages.</p>
-        <button onclick="alert('Hello from GitHub Pages!')">
-            Click Me
-        </button>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#about">Jagoda Koczwara-Szuba</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#cv">CV</a></li>
+      </ul>
     </div>
+  </header>
+
+  <main>
+    <section id="about" class="section section--peach">
+      <div class="wrap about-grid">
+        <div class="portrait">
+          <img src="images/portrait.jpg?v=5" alt="Jagoda Koczwara-Szuba">
+        </div>
+        <div>
+          <p class="eyebrow">About</p>
+          <h1>Jagoda Koczwara-Szuba</h1>
+          <p class="lede">Second-year Computer Science student at Trinity College Dublin. Reliable, organised, and comfortable working independently or in a team.</p>
+          <p class="intro">I study Computer Science in Dublin after finishing secondary school in Tarnobrzeg, Poland. Outside coursework I build small projects, make digital art, and stay involved in community and international programmes.</p>
+          <dl class="facts">
+            <div>
+              <dt>Location</dt>
+              <dd>Dublin, Ireland</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>Computer Science</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open to internships</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--ice">
+      <div class="wrap">
+        <p class="eyebrow">Work</p>
+        <h2>Projects</h2>
+        <div class="project-list">
+          <article class="project-card project-card--sky">
+            <div>
+              <p class="eyebrow">Group project</p>
+              <h3>FlightAnalyser</h3>
+              <p>Finding and sorting flight information from preloaded and real-time sources. Desktop UI in Java Swing, with an external API for live data and an .xlsx spreadsheet as the local database.</p>
+              <p><a href="https://github.com/IceryDev/Flight-Analyser" target="_blank" rel="noopener noreferrer">View on GitHub →</a></p>
+            </div>
+            <div class="tags">
+              <span class="tag">Java Swing</span>
+              <span class="tag">API</span>
+              <span class="tag">.xlsx</span>
+            </div>
+          </article>
+          <article class="project-card project-card--teal">
+            <div>
+              <p class="eyebrow">Mobile / map</p>
+              <h3>SearchAround</h3>
+              <p>Flutter map app for Ireland: search an Eircode, drop a pin on OpenStreetMap, and overlay danger-zone polygons from local GeoJSON assets. Built with flutter_map, geocoding, and Material 3.</p>
+              <p><a href="https://github.com/jagoda-ks/SearchAround" target="_blank" rel="noopener noreferrer">View on GitHub →</a></p>
+            </div>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Maps</span>
+            </div>
+          </article>
+          <article class="project-card project-card--coral">
+            <div>
+              <p class="eyebrow">App</p>
+              <h3>MyPinboard</h3>
+              <p>Flutter app for pinning and organising items in one place.</p>
+              <p><a href="https://github.com/jagoda-ks/MyPinboard/" target="_blank" rel="noopener noreferrer">View on GitHub →</a></p>
+            </div>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="section section--mint">
+      <div class="wrap">
+        <p class="eyebrow">Outside work</p>
+        <h2>Interests</h2>
+        <div class="interest-grid">
+          <a class="interest-btn interest-btn--berry" href="interests/photography.html">
+            <strong>Digital art</strong>
+            <span>Open page →</span>
+          </a>
+          <a class="interest-btn interest-btn--gold" href="interests/reading.html">
+            <strong>Reading</strong>
+            <span>Open page →</span>
+          </a>
+          <a class="interest-btn interest-btn--teal" href="interests/music.html">
+            <strong>Photography</strong>
+            <span>Open page →</span>
+          </a>
+          <a class="interest-btn interest-btn--coral" href="interests/sport.html">
+            <strong>Community</strong>
+            <span>Open page →</span>
+          </a>
+          <a class="interest-btn interest-btn--sky" href="interests/writing.html">
+            <strong>Languages</strong>
+            <span>Open page →</span>
+          </a>
+          <a class="interest-btn interest-btn--violet" href="interests/travel.html">
+            <strong>Travel</strong>
+            <span>Open page →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="section section--navy">
+      <div class="wrap">
+        <p class="eyebrow">Resume</p>
+        <h2>CV</h2>
+        <div class="cv-sheet">
+          <div class="cv-header">
+            <h2>Jagoda Koczwara-Szuba</h2>
+            <p>Computer Science student · Dublin, Ireland · koczwarj@tcd.ie</p>
+          </div>
+          <div class="cv-body">
+            <div class="cv-block">
+              <h3>Education</h3>
+              <article class="cv-entry">
+                <header>
+                  <strong>Trinity College Dublin</strong>
+                  <span>Sep 2025 – Present</span>
+                </header>
+                <p class="role">B.A. (Moderatorship) Honours — Computer Science</p>
+                <ul>
+                  <li>Second-year undergraduate, EQF level 6.</li>
+                  <li>Dublin, Ireland · <a href="https://www.tcd.ie" target="_blank" rel="noopener noreferrer">tcd.ie</a></li>
+                </ul>
+              </article>
+              <article class="cv-entry">
+                <header>
+                  <strong>Społeczne Liceum Ogólnokształcące im. Małego Księcia</strong>
+                  <span>Sep 2021 – Apr 2025</span>
+                </header>
+                <p class="role">Świadectwo Ukończenia Liceum Ogólnokształcącego — Tarnobrzeg, Poland</p>
+                <ul>
+                  <li>Bilingual secondary school · EQF level 4.</li>
+                  <li>Student Body President; Erasmus+ and partnership programmes.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="cv-block">
+              <h3>Projects</h3>
+              <article class="cv-entry">
+                <header>
+                  <strong>FlightAnalyser</strong>
+                  <span><a href="https://github.com/IceryDev/Flight-Analyser" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+                </header>
+                <p class="role">Group project · Java Swing · API · .xlsx</p>
+                <ul>
+                  <li>Find and sort flight information from preloaded and real-time sources.</li>
+                  <li>Desktop UI with an external API and spreadsheet-backed storage.</li>
+                </ul>
+              </article>
+              <article class="cv-entry">
+                <header>
+                  <strong>SearchAround</strong>
+                  <span><a href="https://github.com/jagoda-ks/SearchAround" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+                </header>
+                <p class="role">Flutter · Dart · Maps</p>
+                <ul>
+                  <li>Eircode search on OpenStreetMap with danger-zone polygon overlays.</li>
+                  <li>Geocoding and GeoJSON assets for locations across Ireland.</li>
+                </ul>
+              </article>
+              <article class="cv-entry">
+                <header>
+                  <strong>MyPinboard</strong>
+                  <span><a href="https://github.com/jagoda-ks/MyPinboard/" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+                </header>
+                <p class="role">Flutter · Dart</p>
+                <ul>
+                  <li>Pin and organise items in one place.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="cv-block">
+              <h3>Leadership &amp; international</h3>
+              <article class="cv-entry">
+                <header>
+                  <strong>Student Body President</strong>
+                  <span>Secondary school</span>
+                </header>
+                <p class="role">Społeczne Liceum Ogólnokształcące im. Małego Księcia</p>
+                <ul>
+                  <li>Organising school events and student life; actively supporting charity initiatives.</li>
+                </ul>
+              </article>
+              <article class="cv-entry">
+                <header>
+                  <strong>Erasmus+ &amp; exchange programmes</strong>
+                  <span>2022, 2024 &amp; 2026</span>
+                </header>
+                <p class="role">International experience</p>
+                <ul>
+                  <li>Partnership events, scholarship exchange, and cultural immersion; currently studying in Ireland.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="cv-block">
+              <h3>Skills</h3>
+              <p class="role"><strong>Programming:</strong> Python, Java, Java Swing, C++, C, SQL, R · VS Code, IntelliJ IDEA, RStudio, GitHub</p>
+              <p class="role"><strong>Data &amp; office:</strong> Microsoft Word, Excel, PowerPoint, Access</p>
+              <p class="role"><strong>Graphics:</strong> Blender · Clip Studio Paint, GIMP, Inkscape, Krita</p>
+              <p class="role"><strong>Languages:</strong> Polish (mother tongue) · English (C1–C2) · German (B2)</p>
+            </div>
+          </div>
+        </div>
+        <div class="cv-actions">
+          <a class="btn" href="cv.pdf" download="Jagoda-Koczwara-Szuba-CV.pdf">Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a href="mailto:koczwarj@tcd.ie">Email</a>
+        <a href="https://github.com/jagoda-ks" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/jagoda-natalia-33579b438/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p>Jagoda Koczwara-Szuba · 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
