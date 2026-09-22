@@ -92,6 +92,10 @@ a:hover {
   margin-inline: auto;
 }
 
+.wrap--art {
+  width: min(680px, calc(100% - 5rem));
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -497,7 +501,8 @@ h3 {
   opacity: 0.95;
 }
 
-.language-tile {
+.language-tile,
+.community-tile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -512,29 +517,51 @@ h3 {
   transform: rotate(-1deg);
 }
 
-.language-tile:nth-child(even) {
+.language-tile:nth-child(even),
+.community-tile:nth-child(even) {
   transform: rotate(1.1deg);
   border-radius: var(--radius-alt);
 }
 
-.language-tile:nth-child(3) {
+.language-tile:nth-child(3),
+.community-tile:nth-child(3) {
   transform: rotate(-0.6deg);
 }
 
-.language-tile--gold { background: var(--gold); color: var(--navy); }
-.language-tile--sky { background: var(--sky); }
-.language-tile--teal { background: var(--teal); }
+.community-tile:nth-child(4) {
+  transform: rotate(0.8deg);
+}
 
-.language-tile strong {
+.language-tile--gold,
+.community-tile--gold { background: var(--gold); color: var(--navy); }
+.language-tile--sky,
+.community-tile--sky { background: var(--sky); }
+.language-tile--teal,
+.community-tile--teal { background: var(--teal); }
+.community-tile--coral { background: var(--coral); }
+
+.language-tile strong,
+.community-tile strong {
   font-size: 1.7rem;
   font-weight: 800;
   line-height: 1.15;
 }
 
-.language-tile span {
+.language-tile span,
+.community-tile span {
   font-size: 1.2rem;
   font-family: var(--font-doodle);
   opacity: 0.95;
+}
+
+.community-tile {
+  text-decoration: none;
+}
+
+.community-tile:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: rotate(0deg) scale(1.03);
 }
 
 /* ---------- CV ---------- */
@@ -699,8 +726,66 @@ h3 {
   margin-top: 1rem;
 }
 
+.page-content p + .interest-grid {
+  margin-top: 1.5rem;
+}
+
 .page-content li + li {
   margin-top: 0.35rem;
+}
+
+.page-content .travel-legend li + li {
+  margin-top: 0;
+}
+
+.travel-map {
+  margin-top: 2rem;
+  background: var(--white);
+  border: var(--ink-border);
+  border-radius: var(--radius);
+  padding: 0.85rem 0.85rem 0.5rem;
+  box-shadow: var(--sketch-shadow);
+  overflow: hidden;
+}
+
+.travel-map img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: #d5dde6;
+}
+
+.travel-map figcaption {
+  margin-top: 0.7rem;
+  font-family: var(--font-doodle);
+  font-size: 1.15rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.travel-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  list-style: none;
+  margin-top: 1.15rem;
+  padding: 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.travel-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.travel-legend .swatch {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1.5px solid #000;
+  border-radius: 2px;
+  flex: 0 0 auto;
 }
 
 .placeholder-box {
@@ -799,6 +884,8 @@ h3 {
 
 .art-frame {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   border: var(--ink-border);
   border-radius: var(--radius);
@@ -830,10 +917,6 @@ h3 {
   margin: 1.25rem auto 0.35rem;
 }
 
-.art-frame--padded figcaption {
-  background: transparent;
-}
-
 .art-frame__image {
   display: block;
   width: 100%;
@@ -843,9 +926,16 @@ h3 {
   user-select: none;
 }
 
-.art-frame--tall .art-frame__image,
-.art-frame--wide .art-frame__image {
+.art-frame--cover {
+  height: 100%;
+}
+
+.art-frame--cover .art-frame__image {
+  flex: 1;
+  height: 100%;
   min-height: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .art-frame__shield {
@@ -860,10 +950,15 @@ h3 {
 .art-frame figcaption {
   position: relative;
   z-index: 3;
+  margin-top: auto;
   padding: 0.55rem 0.8rem 0.7rem;
   font-family: var(--font-doodle);
   font-size: 1.15rem;
   background: var(--white);
+}
+
+.art-frame--padded figcaption {
+  background: transparent;
 }
 
 /* ---------- Footer ---------- */
@@ -961,6 +1056,10 @@ h3 {
   .language-tile,
   .language-tile:nth-child(even),
   .language-tile:nth-child(3),
+  .community-tile,
+  .community-tile:nth-child(even),
+  .community-tile:nth-child(3),
+  .community-tile:nth-child(4),
   .cv-sheet {
     transform: none;
   }
